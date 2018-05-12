@@ -45,9 +45,9 @@ def can_be_extended_to_solution(perm):
         if perm[current] == -1 and (perm[current] - perm[diag_r] == 0):
             return False
 
-    print("current, last, down, diag_l, diag_r:", current, last, down, diag_l, diag_r)
-    print("perm:", perm)
-    print("\n")
+    # print("current, last, down, diag_l, diag_r:", current, last, down, diag_l, diag_r)
+    # print("perm:", perm)
+    # print("\n")
 
     return True
 
@@ -94,14 +94,14 @@ def extend(perm, n):
 
     if len(perm) == 25:
         if count_diag(perm) < 16:
-            draw_solution(perm)
-            print("\n")
+            # draw_solution(perm)
+            # print("\n")
             return
         
         print("Find solution:")
         print(perm)
         draw_solution(perm)
-        exit()
+        return
     
     for sign in signs:
         if count_zero(perm) <= 10:
